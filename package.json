@@ -1,0 +1,23 @@
+{
+  "name": "drich-presence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edqe14/drich-presence.git"
+  },
+  "author": "Edqe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Edqe14/drich-presence/issues"
+  },
+  "homepage": "https://github.com/Edqe14/drich-presence#readme",
+  "devDependencies": {
+    "discord-rpc": "^3.1.0",
+    "electron": "^7.1.3"
+  }
+}
