@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main</title>
+    <script src="./scripts/change.js"></script>
+    <script src="./scripts/toggleVisibility.js"></script>
+    <script src="./scripts/richPresence.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <label>Client Id: <input type="text" id="client" onchange="change()" onkeyup="change()"></label>
+    </header>
+    <main class="disabled">
+        <p id="title">Rich Presence Settings</p>
+        <div>
+            <label>State: <input type="text" id="state"></label><br>
+            <label>Details: <input type="text" id="details"></label>
+        </div>
+        <br>
+        <span class="subtitle" onclick="toggleVisibility('advanced')">Advanced Settings</span>
+        <div id="advanced" class="hidden">
+            <label>Large Image Key: <input type="text" id="largeKey" placeholder="Optional"></label><br>
+            <label>Small Image Key: <input type="text" id="smallKey" placeholder="Optional"></label><br>
+            <label>Large Image Text: <input type="text" id="largeText" placeholder="Optional"></label><br>
+            <label>Small Image Text: <input type="text" id="largeText" placeholder="Optional"></label>
+        </div>
+    </main>
+    <footer>
+        <button id="set">Set</button>
+    </footer>
+</body>
+</html>

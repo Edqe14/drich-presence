@@ -10,12 +10,14 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        width: 600,
+        height: 800
     });
 
     // Load Window Page
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'windows', 'main.html'),
+        pathname: path.join(__dirname, 'main', 'main.html'),
         protocol: 'file',
         slashes: true
     }));
@@ -39,4 +41,25 @@ const mainMenu = [
             }
         ]
     }
-]
+];
+
+// MacOS bug fix
+if(process.platform == 'darwin') mainMenu.unshift({});
+
+// DevTools
+if(process.env.NODE_ENV !== 'production') 
+    mainMenu.push({
+        label: "Developer Tools",
+        submenu: [
+            {
+                label: "Toggle DevTools",
+                accelerator: "F12",
+                click(i, w) {
+                    w.toggleDevTools();
+                }
+            },
+            {
+                role: 'reload'
+            }
+        ]
+    });

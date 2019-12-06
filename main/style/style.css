@@ -1,0 +1,57 @@
+.disabled {
+    pointer-events: none;
+
+    opacity: 0.5;
+    background: #CCC;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+label, p, span {
+    color: #f8f8f8;
+    font-weight: 400;
+    font-size: 1.05em;
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    color: #282828;
+    font-size: 0.8em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+#title {
+    font-size: 1.4em;
+    font-weight: 650;
+    margin-bottom: 5px;
+    border-bottom: solid 3px;
+    border-bottom-color: #2e2e2e;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+    border-bottom: solid 3px;
+    border-bottom-color: #2e2e2e;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#advanced {
+    margin-top: 6px;
+}
+
+main > div {
+    margin-left: 12px;
+}
