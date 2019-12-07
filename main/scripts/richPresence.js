@@ -1,5 +1,5 @@
 const RPC = require("discord-rpc");
-let client = null;
+let client = undefined;
 
 function set() {
 	if(client) client.destroy();
@@ -15,8 +15,9 @@ function set() {
 	
 	client = new RPC.Client({ transport: 'ipc' });
 	client.login({ clientId: id.value });
-
+	
 	client.once('ready', () => {
+		console.log('ready')
 		let presence = {
 			instance: true
 		};
@@ -26,13 +27,12 @@ function set() {
 		if (smallImageKey && smallImageKey.value.length > 0) presence.smallImageKey = smallImageKey.value;
 		if (largeImageText && largeImageText.value.length > 0) presence.largeImageText = largeImageText.value;
 		if (smallImageText && smallImageText.value.length > 0) presence.smallImageText = smallImageText.value;
-
 		client.setActivity(presence);
 	});
 };
 
 function clear() {
-    //if(!client) return;
+	console.log('clear')
+    if(!client) return;
     client.clearActivity();
-	client = null;
 }
