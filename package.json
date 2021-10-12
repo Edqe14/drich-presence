@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Edqe14/drich-presence#readme",
   "devDependencies": {
     "discord-rpc": "^3.1.0",
-    "electron": "^7.1.3"
+    "electron": "^11.5.0"
   }
 }
